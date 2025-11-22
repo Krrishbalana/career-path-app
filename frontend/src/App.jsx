@@ -22,7 +22,7 @@ function App() {
 
       // Skill-gap API
       const skillGapResponse = await fetch(
-        "http://localhost:5001/api/skill-gap",
+        "https://career-path-app-yu6i.onrender.com/api/skill-gap",
         {
           method: "POST",
           headers: {
@@ -35,18 +35,23 @@ function App() {
       setSkillGapResult(skillGapData);
 
       // Roadmap API
-      const roadmapResponse = await fetch("http://localhost:5001/api/roadmap", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ targetRole }),
-      });
+      const roadmapResponse = await fetch(
+        "https://career-path-app-yu6i.onrender.com/api/roadmap",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ targetRole }),
+        }
+      );
       const roadmapData = await roadmapResponse.json();
       setRoadmapResult(roadmapData);
 
       // News API
-      const newsResponse = await fetch("http://localhost:5001/api/news");
+      const newsResponse = await fetch(
+        "https://career-path-app-yu6i.onrender.com/api/news"
+      );
       const newsData = await newsResponse.json();
       setNewsResult(newsData);
     } catch (error) {
