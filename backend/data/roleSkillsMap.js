@@ -1,0 +1,7 @@
+const roleSkillsMap = {
+  FrontendDeveloper: ["HTML", "CSS", "JavaScript", "React", "Git"],
+  "Backend Developer": ["Java", "Spring Boot", "SQL", "APIs", "Git"],
+  "Data Analyst": ["Excel", "SQL", "Python", "Dashboards", "Statistics"],
+};
+
+module.exports = roleSkillsMap;
